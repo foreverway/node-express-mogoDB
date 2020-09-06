@@ -1,0 +1,25 @@
+@uri = http://localhost:3000/
+
+GET {{uri}}shoppingList
+
+###
+
+POST {{uri}}shoppingList
+Content-Type:application/json
+
+{
+    "title":"电脑8"
+}
+
+###
+
+PUT {{uri}}shoppingList/5f53bb006e15a80b2c4bdb7c
+Content-Type:application/json
+
+{
+    "title":"电脑1010"
+}
+
+###
+DELETE {{uri}}shoppingList/5f538c6054c5512be4876208
+Content-Type:application/json

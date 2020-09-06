@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    我
+</body>
+<script>
+
+
+// function ajax(URL) {
+//     return new Promise(function (resolve, reject) {
+//         var req = new XMLHttpRequest(); 
+//         req.open('GET', URL, true);
+//         req.onload = function () {
+//         if (req.status === 200) { 
+//                 resolve(req.responseText);
+//             } else {
+//                 reject(new Error(req.statusText));
+//             } 
+//         };
+//         req.onerror = function () {
+//             reject(new Error(req.statusText));
+//         };
+//         req.send(); 
+//     });
+// }
+// var URL = "http://localhost:3000/shoppingList"; 
+// ajax(URL).then(function onFulfilled(value){
+//   console.log('内容是：' + value); 
+// }).catch(function onRejected(error){
+//   console.log('错误：' + error); 
+// });
+
+fetch('http://localhost:3000/shoppingList').then(res=>res.json() 
+).then(res=>{
+    console.log(res)
+})
+
+
+</script>
+</html>
